@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>1 Month Anniversary ❤️</title>
+
+<style>
+
+body{
+margin:0;
+font-family: 'Segoe UI', sans-serif;
+background: linear-gradient(135deg,#ff9a9e,#fad0c4);
+height:100vh;
+overflow-x:hidden;
+color:white;
+text-align:center;
+}
+
+.container{
+padding:40px;
+}
+
+h1{
+font-size:45px;
+animation: fadeIn 3s;
+}
+
+.message{
+font-size:22px;
+max-width:700px;
+margin:auto;
+margin-top:20px;
+line-height:1.6;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+margin-top:40px;
+padding:20px;
+}
+
+.gallery img{
+width:100%;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+transition:0.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.08);
+}
+
+button{
+padding:15px 30px;
+border:none;
+background:#ff4d6d;
+color:white;
+font-size:18px;
+border-radius:30px;
+cursor:pointer;
+margin-top:30px;
+}
+
+button:hover{
+background:#ff1e4d;
+}
+
+@keyframes fadeIn{
+from{opacity:0; transform:translateY(20px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+/* floating hearts */
+
+.heart{
+position:fixed;
+bottom:-20px;
+font-size:20px;
+animation: float 6s linear infinite;
+}
+
+@keyframes float{
+0%{transform:translateY(0);opacity:1;}
+100%{transform:translateY(-100vh);opacity:0;}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Happy 1 Month Anniversary Sweetuuuu ❤️</h1>
+
+<div class="message" id="typing"></div>
+
+<button onclick="showLove()">Click for Surprise 💌</button>
+
+<div class="gallery">
+
+<img src="img1.jpg">
+<img src="img2.jpg">
+<img src="img3.jpg">
+<img src="img4.jpg">
+
+</div>
+
+</div>
+
+<script>
+
+const text = `
+My Sweetuuu ❤️
+
+Happy 1 Month Anniversary.
+
+I know last night we fought and I am really sorry baby 🥺.
+I never want to hurt you.
+
+You mean everything to me.
+Every moment with you is special.
+
+Even when we fight,
+my heart still chooses YOU.
+
+Thank you for loving me,
+thank you for caring for me,
+thank you for being mine.
+
+I promise I will try to be better
+and keep you happy always.
+
+I love you sooooo much Sathia ❤️
+Forever yours.
+`;
+
+let i=0;
+
+function typeWriter(){
+if(i<text.length){
+document.getElementById("typing").innerHTML += text.charAt(i);
+i++;
+setTimeout(typeWriter,40);
+}
+}
+
+typeWriter();
+
+function showLove(){
+alert("I LOVE YOU SO MUCH BABY ❤️🥰");
+}
+
+/* floating hearts */
+
+function createHeart(){
+const heart=document.createElement("div");
+heart.classList.add("heart");
+heart.innerHTML="❤️";
+heart.style.left=Math.random()*100+"vw";
+heart.style.fontSize=(Math.random()*20+10)+"px";
+document.body.appendChild(heart);
+
+setTimeout(()=>{heart.remove()},6000);
+}
+
+setInterval(createHeart,300);
+
+</script>
+
+</body>
+</html>
